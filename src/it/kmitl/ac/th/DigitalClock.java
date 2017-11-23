@@ -14,6 +14,7 @@ public class DigitalClock extends JFrame{
         this.setTitle("Digital Clock");
         this.setBounds(0, 0, 600, 330);
         this.setLayout(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         JLabel thaiTime = new JLabel();
