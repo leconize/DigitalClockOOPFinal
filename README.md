@@ -2,14 +2,18 @@
 
 ## โจทย์
 ในข้อนี้ของรุ่นพี่ให้ใช้swing สร้าง gui ของนาฬิกา Digital ของหลายๆTimezone
-แต่เรื่องจำไม่ได้ว่าอาจารย์ให้เอา Timezone ที่ไหนบ้างจึงเลือกทำแค่ ไทย, ญี่ปุ่น, อังกฤษ
+แต่เรื่องไม่ได้ว่าอาจารย์ให้เอา Timezone ที่ไหนบ้างจึงเลือกทำแค่ ไทย, ญี่ปุ่น, อังกฤษ
 
 ## อธิบาย
 
 มี3 class คือ Main, DigitalCLock, ClockTimer
 
 Main เป็น class สำหรับ runner
-DigitalClock เป็น class extends มาจาก Jframe ไว้เป็น GUI ในข้างใน Digital Clock นั้นจะมีการเรียก ClockTimer เพื่อเป็นLogic สำหรับจัดการเวลา ของนาฬิกาข้างใน ClockTimer เป็น class Thread เพื่อจัดการตั้งเวลาของแต่ละTimeZone ภายใน Method run() จะเป็น loop while(true) ที่ข้างในจะทำการ ทำการตั้งเวลาให้นาฬิกาของเรา
+
+DigitalClock เป็น class extends มาจาก Jframe ไว้เป็น GUI ซึ่งภายใน Digital Clock นั้นจะมีการเรียก ClockTimer เพื่อเป็นLogic สำหรับจัดการเวลา ของนาฬิกาข้างใน 
+
+ClockTimer เป็น class Thread เพื่อจัดการตั้งเวลาของแต่ละTimeZone ภายใน Method run() จะเป็น loop while(true) ที่ข้างในจะทำการ ทำการตั้งเวลาให้นาฬิกาของเรา
+
 
 ```java
     ClockTimer(JLabel timeLabel, String timezone){
